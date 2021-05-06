@@ -6,14 +6,12 @@
 - example_agp - example code to give to the AGP compiler
 
 ## To build and run
-1. $ flex lexer.l                                    
-    - generates lex.yy.c - the source file (logic) for our lexer
-    
-2. $ bison -d parser.y                               
-    - generates parser.tab.h - a header file, and parser.tab.c - the source file for our parser
-    
-3. $ gcc -o agc parser.tab.c lex.yy.c -lfl           
-    - compiles the generated logic (parser.tab.c and lex.yy.c) into a c executable. The lex.yy.c file is linked with the lfl library
+To run the current version of the Asynchronous Graphical Compiler:
+$ make
+$ ./agc example_agp
 
-4. $ ./agc example_agp                               
-    - runs our compiler (agc) using an example file
+------------------------------------------------------------------
+This version correctly identifies tokens and checks the syntax of 
+the input agp code. symtab_dump.out and revisit_dump.out are 
+created once ./agc is ran. They contain all the identifiers in the 
+symbol table and all subgraphs respectively
