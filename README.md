@@ -7,8 +7,8 @@
 
 ## To build and run
 To run the current version of the Asynchronous Graphical Compiler:
-$ make
-$ ./agc example_agp
+- $ make
+- $ ./agc example_agp
 
 ------------------------------------------------------------------
 This version correctly identifies tokens and checks the syntax of 
